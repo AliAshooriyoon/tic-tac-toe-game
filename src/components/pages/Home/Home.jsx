@@ -1,8 +1,11 @@
 import "./Home.css";
+import Header from "../Header/Header.jsx";
 const Home = () => {
   return (
     <>
-      <div className="home">Home</div>
+      <div className="home">
+          <Header/>
+          Home</div>
     </>
   );
 };
