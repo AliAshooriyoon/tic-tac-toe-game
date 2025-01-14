@@ -1,9 +1,29 @@
-html {
+:root {
   height: 100%;
 }
-body {
+
+html, body {
+  height: 100%;
   margin: 0;
 }
+
 #root {
   height: 100%;
+  display: flex;
+  flex-direction: column; /* Makes children stack vertically */
+}
+
+.app {
+  flex: 1; /* Fills available height */
+  display: flex;
+  flex-direction: column; /* Allows children to stack inside */
+}
+
+/*.home {*/
+/*  flex: 1; !* Ensures it fills the parent's height *!*/
+/*  display: flex;*/
+/*}*/
+
+.gameMain {
+  /*flex: 1;*/
 }
