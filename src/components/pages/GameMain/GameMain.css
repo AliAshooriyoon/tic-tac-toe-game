@@ -32,4 +32,6 @@
 /*    grid-row-start: 1;*/
 /*    grid-row-end: 1;*/
 /*}*/
-
+.squaresBoxParent {
+  /* flex-flow: column; */
+}
