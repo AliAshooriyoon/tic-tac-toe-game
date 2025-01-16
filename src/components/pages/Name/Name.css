@@ -29,4 +29,13 @@
   font-size: 0.8rem;
   cursor: pointer;
 }
-
+.input_text {
+  background-color: transparent;
+  height: 3rem;
+  width: 10rem;
+  text-indent: 1rem;
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+  color: #eee;
+}
