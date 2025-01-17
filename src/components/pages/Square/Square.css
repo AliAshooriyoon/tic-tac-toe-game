@@ -4,4 +4,11 @@
   background-color: #ff9d23;
   border-radius: 0.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img__usr{
+  width: 70% ;
+  height:70% ;
 }

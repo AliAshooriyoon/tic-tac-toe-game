@@ -20,7 +20,14 @@ const Square = ({ countFunc, count }) => {
   return (
     <>
       <div className="square" onClick={() => clickedSquare()}>
-        {textUsr}
+        {/* {textUsr} */}
+        {textUsr == "User1" ? (
+          <img src="Star.png" alt="" className="img__usr" />
+        ) : textUsr == "User2" ? (
+          <img src="2_objects.png" alt="" className="img__usr" />
+        ) : (
+          ``
+        )}
       </div>
     </>
   );
