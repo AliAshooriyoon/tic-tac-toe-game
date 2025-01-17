@@ -1,8 +1,12 @@
 import "./Square.css";
 const Square = () => {
+  const clickedSquare = ({ whichUserIs }) => {
+    console.log("g");
+    console.log(`Ich bin ${whichUserIs}`);
+  };
   return (
     <>
-      <div className="square"></div>
+      <div className="square" onClick={clickedSquare}></div>
     </>
   );
 };

@@ -5,6 +5,11 @@ import SquaresBox from "../SquaresBox/SquaresBox.jsx";
 const GameMain = () => {
   const [user1, setUser1] = useState("Ali");
   const [user2, setUser2] = useState("Ahura");
+  const [werSpielt, setWerSpielt] = useState(1);
+  const tellMeWho = (who) => {
+    setWerSpielt(who);
+    console.log(werSpielt);
+  };
   const submitName = (input, userID) => {
     userID == 1 ? setUser1(input) : setUser2(input);
   };
@@ -12,10 +17,20 @@ const GameMain = () => {
     <>
       <div className="gameMain">
         <div className="names">
-          <Name name={user1} userID={1} submitId={submitName} />
-          <Name name={user2} userID={2} submitId={submitName} />
+          <Name
+            name={user1}
+            userID={1}
+            submitId={submitName}
+            whichUser={tellMeWho}
+          />
+          <Name
+            name={user2}
+            userID={2}
+            submitId={submitName}
+            whichUser={tellMeWho}
+          />
         </div>
-        <SquaresBox />
+        <SquaresBox whichUser={werSpielt} />
       </div>
     </>
   );
