@@ -1,12 +1,22 @@
+import { useState } from "react";
 import "./Square.css";
-const Square = () => {
-  const clickedSquare = ({ whichUserIs }) => {
+
+const Square = ({ countFunc, count }) => {
+  //  ***--- States ---***
+  const [textUsr, setTextUsr] = useState("");
+  //  ***--- Spacer ------***
+  //  ***--- Funcs ----***
+  const clickedSquare = () => {
     console.log("g");
-    console.log(`Ich bin ${whichUserIs}`);
+    countFunc();
+    count % 2 ? setTextUsr("User1") : setTextUsr("User2");
   };
+  //  ***--- Spacer ------***
   return (
     <>
-      <div className="square" onClick={clickedSquare}></div>
+      <div className="square" onClick={clickedSquare}>
+        {textUsr}
+      </div>
     </>
   );
 };

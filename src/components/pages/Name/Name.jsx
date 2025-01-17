@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "./Name.css";
 // eslint-disable-next-line react/prop-types
-const Name = ({ name, submitId, userID, whichUser }) => {
+const Name = ({ name, submitId, userID }) => {
   const [changeTypeOfElm, setChangeTypeOfElm] = useState(false);
   const [newName, setNewName] = useState("");
   // const setNewNameFunc = () => {};
-  whichUser(userID);
   const editName = () => {
     console.log("Hi");
     setChangeTypeOfElm(!changeTypeOfElm);

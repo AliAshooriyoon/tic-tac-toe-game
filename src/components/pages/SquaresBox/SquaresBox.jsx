@@ -1,19 +1,25 @@
+import { useState } from "react";
 import Square from "../Square/Square";
 import "./SquaresBox.css";
-// eslint-disable-next-line react/prop-types
-const SquaresBox = ({ whichUser }) => {
+
+const SquaresBox = () => {
+  const [counter, setCounter] = useState(1);
+  const tellClick = () => {
+    setCounter(counter + 1);
+    console.log(counter);
+  };
   return (
     <>
       <div className="SquaresBox">
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
-        <Square whichUserIs={whichUser} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
+        <Square countFunc={tellClick} count={counter} />
       </div>
     </>
   );
