@@ -1,23 +1,27 @@
 let normalInp;
-let usr1 = [];
-let usr2 = [];
+let players = [];
 // let counter = 0;
 let calculateNums = [];
+let calculateName = [];
 const calculate = (inp) => {
   // console.log(`Das ist : ${inp}`);
   console.log("Sieh mal Input");
   console.log(inp);
   normalInp = inp.split(" ");
   console.log(normalInp);
-  normalInp[0] == "User1" ? usr1.push(normalInp) : usr2.push(normalInp);
-  if (usr1.length >= 3) {
-    usr1.some((i) => {
+  players.push(normalInp);
+  if (players.length >= 3) {
+    players.some((i) => {
       if (true) {
         console.log(i[1]);
         calculateNums.push(i[1]);
+        calculateName.push(i[0]);
         console.log(calculateNums.join(""));
+        console.log(calculateName.join(""));
         console.log(typeof calculateNums);
         console.log(calculateNums);
+        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        console.log(calculateName);
         let has1 = calculateNums.includes("1");
         let has2 = calculateNums.includes("2");
         let has3 = calculateNums.includes("3");
@@ -27,7 +31,12 @@ const calculate = (inp) => {
         let has7 = calculateNums.includes("7");
         let has8 = calculateNums.includes("8");
         let has9 = calculateNums.includes("9");
-        has1 && has2 && has3 ? alert(`Yaaaaa ${i[0]}`) && true : false;
+        has1 &&
+        has2 &&
+        has3 &&
+        (calculateName == "User1" || calculateName == "User2")
+          ? alert(`Yaaaaa ${i[0]}`) && true
+          : false;
         has4 && has5 && has6 ? alert(`Yaaaaa ${i[0]}`) && true : false;
         has7 && has8 && has9 ? alert(`Yaaaaa ${i[0]}`) && true : false;
         has1 && has4 && has7 ? alert(`Yaaaaa ${i[0]}`) && true : false;
@@ -38,7 +47,5 @@ const calculate = (inp) => {
       }
     });
   }
-  console.log(usr1);
-  console.log(usr2);
 };
 export default calculate;
